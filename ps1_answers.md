@@ -7,19 +7,33 @@
  **My Responses**
  
  1. What does SQL stand for?  How is it pronounced?
+
 SQL ("es-cue-el" or "sequel") stands for Structured Query Language
+
  2. Are SQL commands case-sensitive?  How can you determine? 
+
 SQL commands are not case-sensitive because one could query select as `SELECT`, `select`, `SeLeCt`, `sElEcT`, ect. However, it is common syntax to use `SELECT` for commands.
+
  3. What does DQL stand for?
+
 DQL stands for Data Query Language
+
  4. True or False:  Is it necessary to use the `FROM` clause with the select statement? 
+
 True
+
  5. True or False:  Is it necessary to use a `WHERE` clause?  If not, when and why would you use a `WHERE` clause?
+
 False. Where clauses may be used after the `SELECT` command or the `FROM` clause if there are specific conditions that must be met, rather than selecting an entire column.
+
  6. What is the purpose of the `ORDER BY` clause?  What is its default value?  
+
 `ORDER BY` will sort the selections, ascending or descending. Ascending is default.
+
  7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
+
 It is not case sensitive, nor should it be, because sometimes names are entered in different cases, such as "China" or "CHINA" in Products.sql
+
  8. Select all product names.
 ```SQL
 SELECT name
