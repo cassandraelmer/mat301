@@ -18,7 +18,7 @@
   False. Where clauses may be used after the `SELECT` command or the `FROM` clause if there are specific conditions that must be met, rather than selecting an entire column.  
   6. What is the purpose of the `ORDER BY` clause?  What is its default value?  
   `ORDER BY` will sort the selections, ascending or descending. Ascending is default.  
-  7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive? 
+  7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive?  
   It is not case sensitive, nor should it be, because sometimes names are entered in different cases, such as "China" or "CHINA" in Products.sql  
   8. Select all product names.  
 ```SQL
