@@ -6,7 +6,7 @@
  
  **My Responses**
  
- 1. What does SQL stand for?  How is it pronounced?
+ 1. What does SQL stand for?  How is it pronounced? \
 SQL ("es-cue-el" or "sequel") stands for Structured Query Language
  2. Are SQL commands case-sensitive?  How can you determine? 
 SQL commands are not case-sensitive because one could query select as "SELECT", "select", "SeLeCt", "sElEcT", ect. However, it is common syntax to use "SELECT" for commands.
