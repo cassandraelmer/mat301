@@ -52,9 +52,9 @@ FROM unemath_Elmer.Products
 WHERE category_id=430 AND manufacturer_id=428
 ```  
   13. How many countries make products contained in the store?  
-  answer=12998  
+  answer=40  
 ```SQL
-SELECT COUNT(country)
+SELECT COUNT(DISTINCT(country))
 FROM unemath_Elmer.Products
 ```  
   14. How many products are manufactured in the USA?  
