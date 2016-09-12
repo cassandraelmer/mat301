@@ -21,12 +21,6 @@
   7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive?  
   It is not case sensitive, nor should it be, because sometimes names are entered in different cases, such as "China" or "CHINA" in Products.sql  
   8. Select all product names. 
- ```apache
-    <Directory /foo/bar>
-      Order allow,deny
-      Deny from all
-    </Directory>
-    ```
 ```SQL
 SELECT name
 FROM unemath_Elmer.Products
