@@ -21,16 +21,16 @@
   7. Is the data in the products table case sensitive?  Should it be case sensitive/insensitive?  
   It is not case sensitive, nor should it be, because sometimes names are entered in different cases, such as "China" or "CHINA" in Products.sql  
   8. Select all product names.  
-   ```SQL  
-   SELECT name  
-   FROM unemath_Elmer.Products  
-   ```  
+```SQL
+SELECT name
+FROM unemath_Elmer.Products
+```  
   9. List the MSRP for all products in ascending order.  
-   ```SQL
-   SELECT msrp
-   FROM unemath_Elmer.Products
-   ORDER BY msrp
-   ```  
+```SQL
+SELECT msrp
+FROM unemath_Elmer.Products
+ORDER BY msrp
+```  
   10. Find all products within  category 430.  What is category 430?  
 ```SQL
 SELECT *
