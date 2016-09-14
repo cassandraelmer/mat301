@@ -41,12 +41,12 @@
     ```
 9. Suppose you want to have a 35% markup on all products and sales tax is 7.5%.  Determine the 'Sales Price' of each product.  
     ```
-    SELECT price, ROUND((1.35*price)+0.075*(1.35*price),2) AS sales_price FROM unemath_Elmer.Products;
+    SELECT price, ROUND((1.35*price)+0.075*(1.35*price),2) AS 'Sales Price' FROM unemath_Elmer.Products;
     ```
-10. True or False: Both conditions when using the OR operator must be true.  
+10. True or False: Both conditions when using the `OR` operator must be true.  
     False
-11. What is the logical negation of the IN operator?  
-    NOT IN
+11. What is the logical negation of the `IN` operator?  
+    `NOT IN`
 12. What is wrong with the following statement: `SELECT * FROM Products WHERE price BETWEEN 10, 100;`  
     `BETWEEN` requires `AND` not `,`
 13. Select products with length less than 12 inches and sort decsending.  
