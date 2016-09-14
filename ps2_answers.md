@@ -48,7 +48,7 @@
 11. What is the logical negation of the IN operator?  
     NOT IN
 12. What is wrong with the following statement: `SELECT * FROM Products WHERE price BETWEEN 10, 100;  
-    BETWEEN requires AND not a ','
+    `BETWEEN` requires `AND` not a `,`
 13. Select products with length less than 12 inches and sort decsending.  
     
 14. How many products are there whose price is between $10 and $20?  
