@@ -2,7 +2,7 @@
 
 
 ===
-
+### My answers
 1. Select all products (UPC) made in China whose price is less than $50.  
     ```
     SELECT upc FROM unemath_Elmer.Products WHERE country='China' AND msrp < 50;
@@ -48,9 +48,19 @@
 11. What is the logical negation of the IN operator?  
     NOT IN
 12. What is wrong with the following statement: `SELECT * FROM Products WHERE price BETWEEN 10, 100;`  
-    `BETWEEN` requires `AND` not a `,`
+    `BETWEEN` requires `AND` not `,`
 13. Select products with length less than 12 inches and sort decsending.  
-    
+    ```
+    SELECT * FROM unemath_Elmer.Products WHERE length<12 ORDER BY length desc;
+    ```
 14. How many products are there whose price is between $10 and $20?  
+    answer=3226
+    ```
+    SELECT * FROM unemath_Elmer.Products WHERE price BETWEEN 10 and 20;
+    ```
 15. How many products are there made in China whose MSRP is between $10 and $20.  
+    answer=2189  
+    ```
+    SELECT * FROM unemath_Elmer.Products WHERE msrp BETWEEN 10 and 20 AND country='China';
+    ```
 
