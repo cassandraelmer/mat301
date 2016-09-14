@@ -30,8 +30,8 @@
 7. Find products whose country code is NULL.  
     ```
     SELECT * FROM unemath_Elmer.Products WHERE country IS NULL;
-    ```
-    Actual reporting based on table-- empty instead of null
+    ```  
+    Actual reporting based on table-- empty instead of null  
     ```
     SELECT * FROM unemath_Elmer.Products WHERE country='';
     ```
