@@ -54,7 +54,7 @@
     SELECT * FROM unemath_Elmer.Products WHERE length<12 ORDER BY length desc;
     ```
 14. How many products are there whose price is between $10 and $20?  
-    answer=3226
+    answer=3226  
     ```
     SELECT * FROM unemath_Elmer.Products WHERE price BETWEEN 10 and 20;
     ```
