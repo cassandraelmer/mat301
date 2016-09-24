@@ -16,7 +16,7 @@
    Length and width are determinants.
 
 5. If a relation has no duplicate data, how can you be sure there is always at least one primary key?   
-   
+   words indented?
 
 6. Give an example of a relation.  Determine a natural key for this relation.
    The voting register for a certian county. The natural key would be the individuals' social security number.
@@ -30,6 +30,9 @@
    
 
 9. Given two relations S and R below find the Cartsian Product S x R. 
+
+10. Find the natural join between the Faculty and Department relations below.
+   
 
 S
 --------------
@@ -48,10 +51,6 @@ R
 | 2 | 1 | 5 |
 
 
-
-   
-
-10. Find the natural join between the Faculty and Department relations below.
 
 
 Faculty
