@@ -16,10 +16,10 @@
    Length and width are determinants.
 
 5. If a relation has no duplicate data, how can you be sure there is always at least one primary key?   
-   words indented?
+   words indented? yes
 
 6. Give an example of a relation.  Determine a natural key for this relation.
-   The voting register for a certian county. The natural key would be the individuals' social security number.
+   An example relation is the voting register for a certian county. The natural key would be the individuals' social security number.
 
   For question 7 - 8, Consider product *orders*.  In particular, associated with an order is: customer name (first and last), address (street, city, state, zip), phone, email, the products orders (including item, quantity, and price).  
 
@@ -29,9 +29,11 @@
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.   
    
 
-9. Given two relations S and R below find the Cartsian Product S x R. 
+9. Given two relations S and R below find the Cartsian Product S x R.   
+   
 
-10. Find the natural join between the Faculty and Department relations below.
+10. Find the natural join between the Faculty and Department relations below.   
+   
    
 
 S
