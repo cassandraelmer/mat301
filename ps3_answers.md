@@ -16,7 +16,7 @@
    Length and width are determinants.
 
 5. If a relation has no duplicate data, how can you be sure there is always at least one primary key?   
-   words indented? yes
+   Primary keys are identifiers for the data, so if there are no duplicates, they are all unique, and therefore can be primary keys.
 
 6. Give an example of a relation.  Determine a natural key for this relation.
    An example relation is the voting register for a certian county. The natural key would be the individuals' social security number.
@@ -27,7 +27,7 @@
    
 
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.   
-   
+   It could be used because people should only have one email. However, a person might make orders with two different emails.
 
 9. Given two relations S and R below find the Cartsian Product S x R.   
    
