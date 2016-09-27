@@ -27,8 +27,8 @@
    | order_id PK |   
    |-------------|   
    
-   |customer_id PK |   
-   |---------------|   
+   | customer_id PK |   
+   |----------------|   
 
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.   
    It could be used because people should only have one email. However, a person might make orders with two different emails, or no longer use that email.
