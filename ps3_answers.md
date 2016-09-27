@@ -102,8 +102,7 @@
    Order
    --------------------
    | order_id (PK)    |
-   |------------------|
-   | customer_id (PK) |
+     customer_id (PK)  
    |------------------|
    | price            |
    
