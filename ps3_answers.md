@@ -25,8 +25,8 @@
 
 7. Create a relational data model for *orders*.  Consider applying normalization rules (discuss Monday)   
    
-   | order_id (PK) |   
-   |---------------|   
+   | order_id (PK) |   | table 2? |
+   |---------------|   |----------|
    
    | customer_id (PK) |   
    |------------------|   
