@@ -24,6 +24,7 @@
   For question 7 - 8, Consider product *orders*.  In particular, associated with an order is: customer name (first and last), address (street, city, state, zip), phone, email, the products orders (including item, quantity, and price).  
 
 7. Create a relational data model for *orders*.  Consider applying normalization rules (discuss Monday)   
+   
    | order_id PK |   
    |-------------|   
    
