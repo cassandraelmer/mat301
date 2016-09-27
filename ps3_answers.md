@@ -99,10 +99,11 @@
    | email    |
    ------------
    
-   Order
+   Orders
    --------------------
    | order_id (PK)    |
-     customer_id (PK)  
+   |------------------|
+   | customer_id (PK) |
    |------------------|
    | price            |
    
