@@ -25,6 +25,25 @@
 
 7. Create a relational data model for *orders*.  Consider applying normalization rules (discuss Monday)   
    
+   1NF
+   --------------------------------
+   
+   Orders
+   --------------------
+   | first    |
+   | last     |
+   | street   |
+   | city     |
+   | state    |
+   | zip      |
+   | phone    |
+   | email    |
+   | item     |
+   | quantity |
+   | price    |
+   
+   2NF
+   ---------------------------------
    
    Orders
    -----------------
@@ -41,19 +60,51 @@
    |------------------|   
    | first_name       |
    | last_name        |
-   | zip (FK)         |
+   | street           |
+   | city             |
+   | state            |
+   | zip              |
    | phone            |
    | email            |
    --------------------
    
-   Addresses
+   3NF
+   -------------------------------
+   
+   Items
+   -----------------
+   | order_id (PK) |   
+   |---------------|   
+   | item          |
+   | quantity      |
+   -----------------
+   
+   Customers
+   --------------------
+   | customer_id (PK) |   
+   |------------------|   
+   | first_name       |
+   | last_name        |
+   | zip (FK)         |
+   --------------------
+   
+   Customer Information
    ------------
    | zip (PK) |
    |----------|
    | street   |
    | city     |
    | state    |
+   | phone    |
+   | email    |
    ------------
+   
+   Order
+   ----------
+   | order_id (PK)    |
+   | customer_id (PK) |
+   |------------------|
+   | price            |
    
    
 
