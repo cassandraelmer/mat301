@@ -27,20 +27,33 @@
    
    
    Orders
+   -----------------
    | order_id (PK) |   
    |---------------|   
    | item          |
    | quantity      |
    | price         |
+   -----------------
    
    Customers
+   --------------------
    | customer_id (PK) |   
    |------------------|   
    | first_name       |
    | last_name        |
    | zip (FK)         |
+   | phone            |
+   | email            |
+   --------------------
    
-   
+   Addresses
+   ------------
+   | zip (PK) |
+   |----------|
+   | street   |
+   | city     |
+   | state    |
+   ------------
    
    
 
