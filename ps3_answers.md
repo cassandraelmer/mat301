@@ -25,28 +25,28 @@
 
 7. Create a relational data model for *orders*.  Consider applying normalization rules (discuss Monday)   
    
-   1NF
-   --------------------------------
-   
-   | Orders   |
-   |----------|
-   | first    |
-   | last     |
-   | street   |
-   | city     |
-   | state    |
-   | zip      |
-   | phone    |
-   | email    |
-   | item     |
-   | quantity |
-   | price    |
-   
-   2NF
-   ---------------------------------
-   
-   Orders
-   -----------------
+   1NF   
+   --------------------------------   
+      
+   | Orders   |   
+   |----------|   
+   | first    |   
+   | last     |   
+   | street   |   
+   | city     |   
+   | state    |   
+   | zip      |   
+   | phone    |   
+   | email    |   
+   | item     |   
+   | quantity |   
+   | price    |   
+      
+   2NF   
+   ---------------------------------   
+      
+   Orders   
+   -----------------   
    | order_id (PK) |   
    |---------------|   
    | item          |
@@ -54,8 +54,8 @@
    | price         |
    -----------------
    
-   Customers
-   --------------------
+   Customers   
+   --------------------   
    | customer_id (PK) |   
    |------------------|   
    | first_name       |
@@ -68,10 +68,10 @@
    | email            |
    --------------------
    
-   3NF
-   -------------------------------
+   3NF   
+   -------------------------------   
    
-![Orders](https://github.com/cassandraelmer/mat301/blob/master/Orders.png)
+   ![Orders](https://github.com/cassandraelmer/mat301/blob/master/Orders.png)   
    
    
 
