@@ -71,7 +71,7 @@
    3NF   
    -------------------------------   
    
-   ![Orders](https://github.com/cassandraelmer/mat301/blob/master/Orders.png)   
+   ![Orders2](https://github.com/cassandraelmer/mat301/blob/master/Orders2.png)   
    
    
 
