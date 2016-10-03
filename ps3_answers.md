@@ -71,41 +71,7 @@
    3NF
    -------------------------------
    
-   Items
-   -----------------
-   | order_id (PK) |   
-   |---------------|   
-   | item          |
-   | quantity      |
-   -----------------
-   
-   Customers
-   --------------------
-   | customer_id (PK) |   
-   |------------------|   
-   | first_name       |
-   | last_name        |
-   | zip (FK)         |
-   --------------------
-   
-   Customer Information
-   ------------
-   | zip (PK) |
-   |----------|
-   | street   |
-   | city     |
-   | state    |
-   | phone    |
-   | email    |
-   ------------
-   
-   Orders
-   --------------------
-   | order_id (PK)    |
-   |------------------|
-   | customer_id (PK) |
-   |------------------|
-   | price            |
+![Orders](https://github.com/cassandraelmer/mat301/blob/master/Orders.png)
    
    
 
