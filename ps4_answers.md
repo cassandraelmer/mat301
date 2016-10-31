@@ -16,7 +16,7 @@
    details of order   
 
 6. Use forms created in 4 and 5 to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
-   many entries will make it difficult when just testing the fit of the model   
+   many entries will make it difficult to just test the fit of the model   
 
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
    ```sql
@@ -31,7 +31,10 @@
 
 9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
    ```sql
-   SELECT * FROM unemath_Elmer.Orders WHERE product_id = 3452;
+   SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 200;
+   ```
+   ```sql
+   SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 3452;
    ```
 
 10. List 5 questions that you can answer from this data.    
