@@ -4,22 +4,23 @@
    
 
 2. Why do we need an OrderItems table?   
-   
+   one customer can have many orders   
 
 3. Create linked tables in MS Access.   
    
 
 4. Create forms to enter customer data.   
-   
+   name, address, etc
 
 5. Create a form with a subform to enter orders and order item.   
-   
+   details of order
 
 6. Use forms created in 4 and 5 to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
    
 
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
-   
+   INSERT INTO unemath_Elmer.Customers (`the columns from my table`) VALUES [make up stuff]
+   5-10 customers, 10-15 orders
 
 8. Find all customer orders.   
    
