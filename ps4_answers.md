@@ -21,7 +21,7 @@
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
    ```sql
    INSERT INTO `unemath_Elmer.Customers` (`the columns from my table`) 
-   VALUES [make up stuff]
+   VALUES [make up stuff];
    5-10 customers, 10-15 orders
    ```
 
