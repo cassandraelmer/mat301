@@ -20,9 +20,17 @@
 
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
    ```sql
-   INSERT INTO `unemath_Elmer.Customers` (`the columns from my table`) 
-   VALUES [make up stuff];
-   5-10 customers, 10-15 orders
+   INSERT INTO `Customers` (`customer_id`,`first_name`,`last_name`,`address 1`,`address 2`,`zip_code`,`phone`,`email`) 
+   VALUES 
+   (1001,'Joseph','Polk','100 Main Street','',13601,3157789436,'jpolk37@gmail.com'),
+   (1002,'Sally','Polk','100 Main Street','',13601,3157789436,'spolk62@gmail.com'),
+   (1003,'Lynn','Avery','36145 Cemetery Rd','',13656,4083649127,'lavery7462@yahoo.com'),
+   (1004,'Nathan','Lake','211 Washington St','PO Box 497',04005,8406686468,'nlake486@gmail.com'),
+   (1005,'Karin','White','57 Longways Drive','PO Box 3179',04005,4087624935,'kwhite16@yahoo.com');
+   ```
+   
+   ```sql
+   
    ```
 
 8. Find all customer orders.   
@@ -30,9 +38,9 @@
    SELECT * FROM unemath_Elmer.Orders;
    ```
 
-9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
+9. Select all customers that ordered a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
    ```sql
-   SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 200;
+   SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 1001;
    ```
    ```sql
    SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 3452;
