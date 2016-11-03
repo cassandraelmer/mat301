@@ -6,16 +6,16 @@
 2. Why do we need an OrderItems table?   
    one customer can have many orders, and these orders can have many items   
 
-3. Create linked tables in ~~MS Access~~ MySQL.   
+3. ~~Create linked tables in MS Access~~.   
    
 
-4. Create forms to enter customer data.   
+4. ~~Create forms to enter customer data.~~   
    name, address, etc   
 
-5. Create a form with a subform to enter orders and order item.   
-   details of order   
+5. ~~Create a form with a subform to enter orders and order item.   
+   details of order~~   
 
-6. Use forms created in 4 and 5 to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
+6. Use forms ~~created in 4 and 5~~ in MySQL to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
    many entries will make it difficult to just test the fit of the model   
 
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
