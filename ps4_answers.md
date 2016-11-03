@@ -4,9 +4,9 @@
    
 
 2. Why do we need an OrderItems table?   
-   one customer can have many orders   
+   one customer can have many orders, and these orders can have many items   
 
-3. Create linked tables in MS Access.   
+3. Create linked tables in ~~MS Access~~ MySQL.   
    
 
 4. Create forms to enter customer data.   
