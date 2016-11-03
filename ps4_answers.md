@@ -12,8 +12,8 @@
 4. ~~Create forms to enter customer data.~~   
    name, address, etc   
 
-5. ~~Create a form with a subform to enter orders and order item.   
-   details of order~~   
+5. ~~Create a form with a subform to enter orders and order item.~~   
+   details of order   
 
 6. Use forms ~~created in 4 and 5~~ in MySQL to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
    many entries will make it difficult to just test the fit of the model   
