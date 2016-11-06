@@ -10,10 +10,10 @@
    
 
 4. ~~Create forms to enter customer data.~~   
-   name, address, etc   
+   would contain name, address, etc   
 
 5. ~~Create a form with a subform to enter orders and order item.~~   
-   details of order   
+   would contain details of order   
 
 6. Use forms ~~created in 4 and 5~~ in MySQL to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
    ![Forms1](https://github.com/cassandraelmer/mat301/blob/master/Forms1.png)   
@@ -79,9 +79,14 @@
 
 10. List 5 questions that you can answer from this data.    
     1. How many customers are from Watertown, NY?   
+
     2. How many orders totalled over $50?   
+
     3. Which state sells the most products?   
+
     4. What is the maximum number of orders a single customer has placed?   
+
     5. How many items are in the largest order?   
 
+    
 
