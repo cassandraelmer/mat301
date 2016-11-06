@@ -16,6 +16,9 @@
    details of order   
 
 6. Use forms ~~created in 4 and 5~~ in MySQL to insert Customers and Orders.  Add customers that have not made any orders. Make the number of entries relatively small.  Why?   
+   ![Forms1](https://github.com/cassandraelmer/mat301/blob/master/Forms1.png)   
+   ![Forms2](https://github.com/cassandraelmer/mat301/blob/master/Forms2.png)   
+   
    many entries will make it difficult to just test the fit of the model   
 
 7. Use SQL DML to INSERT records into Customers and Orders (and OrderItems).   
