@@ -127,7 +127,7 @@
    (1003,'Lynn','Avery','36145 Cemetery Rd','',13656,4083649127,'lavery7462@yahoo.com'),
    (1004,'Nathan','Lake','211 Washington St','PO Box 497',04005,8406686468,'nlake486@gmail.com'),
    (1005,'Karin','White','57 Longways Drive','PO Box 3179',04005,4087624935,'kwhite16@yahoo.com');
-   ```
+   ```   
    
    ```sql
    INSERT INTO `unemath_Elmer.Orders` (`order_id`,`customer_id`,`subtotal`,`total`,`date`)
@@ -139,7 +139,7 @@
    (1005,1001,106.20,112.04,'2016-10-08 13:17:33'),
    (1006,1003,28.68,30.26,'2016-10-08 15:45:06'),
    (1007,1005,23.30,24.58,'2016-10-17 03:20:20');
-   ```
+   ```   
    
    ```sql
    INSERT INTO `unemath_Elmer.Order Items` (`order_item_id`,`order_id`,`product_id`,`quantity`)
@@ -159,48 +159,29 @@
    (1013,1007,2390,2),
    (1014,1007,2391,2),
    (1015,1007,2392,1);
-   ```
+   ```   
 
 8. Find all customer orders.   
    ```sql
    SELECT * FROM unemath_Elmer.Orders;
-   ```
+   ```   
 
 9. Select all customers that ordered a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
    ```sql
    SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 1009;
-   ```
+   ```   
    ```sql
    SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 3452;
-   ```
+   ```   
 
 10. List 5 questions that you can answer from this data.    
    1. How many customers are from Watertown, NY?   
-      ```sql   
-      SELECT * FROM unemath_Elmer.Customers WHERE zip_code = 13601;   
-      ```   
    
    2. How many orders totalled over $50?   
-      ```sql   
-      SELECT * FROM unemath_Elmer.Orders WHERE total > 50;   
-      ```   
    
    3. Which state sells the most products?   
-      ```sql   
-         
-      ```   
    
    4. What is the maximum number of orders a single customer has placed?   
-      ```sql   
-         
-      ```   
    
    5. How many items are in the largest order?   
-      ```sql   
-      SELECT order_id,max(number_of_items) AS answer FROM   
-      (SELECT order_id,sum(quantity) AS number_of_items FROM unemath_Elmer.`Order Items` GROUP BY order_id)   
-      ```   
    
-   *doesn't work yet*
-    
-
