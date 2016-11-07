@@ -35,7 +35,7 @@
      `last_name` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
      `address 1` VARCHAR(45) CHARACTER SET 'utf8' NULL DEFAULT NULL,
      `address 2` VARCHAR(45) CHARACTER SET 'utf8' NULL DEFAULT NULL,
-     `zip_code` INT(11) NULL DEFAULT NULL,
+     `zip_code` CHAR(5) NULL DEFAULT NULL,
      `phone` CHAR(10) CHARACTER SET 'utf8' NULL DEFAULT NULL,
      `email` VARCHAR(45) CHARACTER SET 'utf8' NULL DEFAULT NULL,
      PRIMARY KEY (`customer_id`))
