@@ -175,27 +175,27 @@
    ```
 
 10. List 5 questions that you can answer from this data.    
-    1. How many customers are from Watertown, NY?   
+   1. How many customers are from Watertown, NY?   
    ```sql   
    SELECT * FROM unemath_Elmer.Customers WHERE zip_code = 13601;   
    ```   
    
-    2. How many orders totalled over $50?   
+   2. How many orders totalled over $50?   
    ```sql   
    SELECT * FROM unemath_Elmer.Orders WHERE total > 50;   
    ```   
    
-    3. Which state sells the most products?   
+   3. Which state sells the most products?   
    ```sql   
       
    ```   
    
-    4. What is the maximum number of orders a single customer has placed?   
+   4. What is the maximum number of orders a single customer has placed?   
    ```sql   
       
    ```   
    
-    5. How many items are in the largest order?   
+   5. How many items are in the largest order?   
    ```sql   
    SELECT order_id,max(number_of_items) AS answer FROM   
    (SELECT order_id,sum(quantity) AS number_of_items FROM unemath_Elmer.`Order Items` GROUP BY order_id)   
