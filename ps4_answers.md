@@ -181,7 +181,7 @@
    
    3. Which state sells the most products?   
    
-   4. What is the maximum number of orders a single customer has placed?   
+   4. Which customer has placed the most orders?   
    
    5. How many items are in the largest order?   
    
