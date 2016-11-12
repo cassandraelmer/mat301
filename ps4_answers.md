@@ -168,7 +168,10 @@
 
 9. Select all customers that ordered a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
    ```sql
-   SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 1009;
+   SELECT Customers.customer_id, Customers.first_name, Customers.last_name, `Order Items`.product_id, Products.`name`
+   FROM Customers INNER JOIN Orders INNER JOIN `Order Items` INNER JOIN Products
+   ON Customers.customer_id = Orders.customer_id AND Orders.order_id = `Order Items`.order_id AND `Order Items`.product_id = Products.product_id
+   WHERE `Order Items`.product_id = 1009;
    ```   
    ```sql
    SELECT customer_id FROM unemath_Elmer.Orders WHERE product_id = 3452;
