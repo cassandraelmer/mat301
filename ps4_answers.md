@@ -178,35 +178,35 @@
 
    1. How many customers are from Watertown, NY?      
    ```sql
-   SELECT Customers.customer_id, zipcodes.city, zipcodes.state, Customers.zip_code   
-   FROM Customers INNER JOIN zipcodes ON Customers.zip_code = zipcodes.id   
-   WHERE zipcodes.city = 'WATERTOWN' AND zipcodes.state = 'NY';   
+   SELECT Customers.customer_id, zipcodes.city, zipcodes.state, Customers.zip_code
+   FROM Customers INNER JOIN zipcodes ON Customers.zip_code = zipcodes.id
+   WHERE zipcodes.city = 'WATERTOWN' AND zipcodes.state = 'NY';
    ```   
 
    2. How many orders totalled over $50?   
    ```sql
-   SELECT Orders.order_id, Orders.total FROM Orders WHERE Orders.total > 50;   
+   SELECT Orders.order_id, Orders.total FROM Orders WHERE Orders.total > 50;
    ```   
 
    3. Which state sells the most products?      
    ```sql
-   SELECT zipcodes.state, SUM(`Order Items`.quantity) FROM   
-   zipcodes INNER JOIN Customers INNER JOIN Orders INNER JOIN `Order Items`   
-   ON Customers.zip_code = zipcodes.id AND Orders.customer_id = Customers.customer_id AND `Order Items`.order_id = Orders.order_id   
-   GROUP BY zipcodes.state;   
+   SELECT zipcodes.state, SUM(`Order Items`.quantity) FROM
+   zipcodes INNER JOIN Customers INNER JOIN Orders INNER JOIN `Order Items`
+   ON Customers.zip_code = zipcodes.id AND Orders.customer_id = Customers.customer_id AND `Order Items`.order_id = Orders.order_id
+   GROUP BY zipcodes.state;
    ```   
 
    4. Which customer has placed the most orders?      
    ```sql   
-   SELECT Orders.customer_id, MAX(a.numorders) FROM   
-   (SELECT COUNT(*) AS numorders FROM Orders GROUP BY customer_id) a   
-   INNER JOIN Orders;  
+   SELECT Orders.customer_id, MAX(a.numorders) FROM
+   (SELECT COUNT(*) AS numorders FROM Orders GROUP BY customer_id) a
+   INNER JOIN Orders;
    ```   
 
    5. How many items are in the largest order?      
-   ```sql   
-   SELECT order_id, MAX(a.numitems) FROM   
-   (SELECT SUM(quantity) AS numitems FROM `Order Items` GROUP BY order_id) a   
-   INNER JOIN `Order Items`;   
+   ```sql
+   SELECT order_id, MAX(a.numitems) FROM
+   (SELECT SUM(quantity) AS numitems FROM `Order Items` GROUP BY order_id) a
+   INNER JOIN `Order Items`;
    ```   
 
