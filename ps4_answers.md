@@ -175,7 +175,9 @@
    ```   
 
 10. List 5 questions that you can answer from this data.    
+
    1. How many customers are from Watertown, NY?      
+   
    ```sql   
    SELECT Customers.customer_id, zipcodes.city, zipcodes.state, Customers.zip_code   
    FROM Customers INNER JOIN zipcodes ON Customers.zip_code = zipcodes.id   
@@ -183,11 +185,13 @@
    ```   
    
    2. How many orders totalled over $50?   
+   
    ```sql   
    SELECT Orders.order_id, Orders.total FROM Orders WHERE Orders.total > 50;   
    ```   
    
    3. Which state sells the most products?      
+   
    ```sql   
    SELECT zipcodes.state, SUM(`Order Items`.quantity) FROM   
    zipcodes INNER JOIN Customers INNER JOIN Orders INNER JOIN `Order Items`   
@@ -196,6 +200,7 @@
    ```   
    
    4. Which customer has placed the most orders?      
+   
    ```sql   
    SELECT Orders.customer_id, MAX(a.numorders) FROM   
    (SELECT COUNT(*) AS numorders FROM Orders GROUP BY customer_id) a   
@@ -203,6 +208,7 @@
    ```   
    
    5. How many items are in the largest order?      
+   
    ```sql   
    SELECT order_id, MAX(a.numitems) FROM   
    (SELECT SUM(quantity) AS numitems FROM `Order Items` GROUP BY order_id) a   
