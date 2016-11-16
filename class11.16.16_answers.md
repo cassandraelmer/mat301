@@ -4,7 +4,7 @@
 ---
 
 1. INSERT 10 new customer into the database that has NOT made orders.   
-   ```sql
+   ```sql   
    INSERT INTO `Customers` (`customer_id`,`first_name`,`last_name`,`address 1`,`address 2`,`zip_code`,`phone`,`email`)
     VALUES 
     (1009,"Eleanor","Nixon","Ap #924-3318 Mattis Avenue","","92414","1497480233","mauris.erat@pellentesquemassalobortis.org"),
