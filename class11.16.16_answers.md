@@ -3,7 +3,7 @@
 ## Exercises (using SQL)
 ---
 
-1. INSERT 10 new customer into the database that has NOT made orders.
+1. INSERT 10 new customer into the database that has NOT made orders.   
    ```sql
    INSERT INTO `Customers` (`customer_id`,`first_name`,`last_name`,`address 1`,`address 2`,`zip_code`,`phone`,`email`)
     VALUES 
@@ -18,13 +18,13 @@
     (1017,"Charlotte","Franco","Ap #365-9420 Purus, St.","","55394","7878331364","mattis.ornare.lectus@idenim.net"),
     (1018,"Hasad","Luna","420-4135 Egestas St.","","18448","7428167933","accumsan.neque@lectusNullamsuscipit.com");
    ```
-1. Update a customer's address as 'they have moved' since you added it.
-1. Delete a customer that you recently added.
-1. Update a manufacturer's website information.
-1. Update one of the unknown categories.
-1. Find all customers that have not made any orders (of course they are probably the ones you just added)
-1. Select all products that customers from zip code 26034 have ordered.
-1. What other queries can you form?  What other queries might be of interest to the owners of the store?  What queries might be of interest to the customers?
+1. Update a customer's address as 'they have moved' since you added it.   
+1. Delete a customer that you recently added.   
+1. Update a manufacturer's website information.   
+1. Update one of the unknown categories.   
+1. Find all customers that have not made any orders (of course they are probably the ones you just added)   
+1. Select all products that customers from zip code 26034 have ordered.   
+1. What other queries can you form?  What other queries might be of interest to the owners of the store?  What queries might be of interest to the customers?   
 
 ## More functions
 ---
