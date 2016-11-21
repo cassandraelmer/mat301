@@ -35,17 +35,20 @@ Research the following, determine their functionality and syntax of use:
    ```sql
    SELECT UPPER('text') AS message
    ```   
-   makes everything all caps
+   makes everything all caps   
 1. LOWER()
-1. LTRIM()
-1. RTRIM()
+1. LTRIM()   
+   trim extra spaces from left   
+1. RTRIM()   
+   trim extra spaces from right   
 1. CONCAT()   
    ```sql
    SELECT concat('fname',' ','lname') AS fullname
    ```   
    do not need FROM   
    will make strings combined   
-1. LENGTH()
+1. LENGTH()   
+   length of string
 1. ISNULL()
 1. LPAD()
 1. RPAD()
