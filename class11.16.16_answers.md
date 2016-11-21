@@ -35,7 +35,12 @@ Research the following, determine their functionality and syntax of use:
 1. LOWER()
 1. LTRIM()
 1. RTRIM()
-1. CONCAT()
+1. CONCAT()   
+   ```sql
+   SELECT concat('fname',' ','lname) AS fullname
+   ```
+   do not need FROM
+   will make strings combined
 1. LENGTH()
 1. ISNULL()
 1. LPAD()
