@@ -31,10 +31,10 @@
 
 Research the following, determine their functionality and syntax of use:
 
-1. UPPER()
+1. UPPER()   
    ```sql
    SELECT UPPER('text') AS message
-   ```
+   ```   
    makes everything all caps
 1. LOWER()
 1. LTRIM()
@@ -42,9 +42,9 @@ Research the following, determine their functionality and syntax of use:
 1. CONCAT()   
    ```sql
    SELECT concat('fname',' ','lname') AS fullname
-   ```
-   do not need FROM
-   will make strings combined
+   ```   
+   do not need FROM   
+   will make strings combined   
 1. LENGTH()
 1. ISNULL()
 1. LPAD()
