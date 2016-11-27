@@ -36,7 +36,7 @@ Research the following, determine their functionality and syntax of use:
    SELECT UPPER('text') AS message
    ```   
    makes everything uppercase   
-1. LOWER()
+1. LOWER()   
    ```sql
    ```
    makes everything lowercase
@@ -52,12 +52,12 @@ Research the following, determine their functionality and syntax of use:
    will make strings combined   
 1. LENGTH()   
    length of string
-1. ISNULL()
-   find entries that are null
-1. LPAD()
-   add/'pad' string to the left of another
-1. RPAD()
-   add/'pad' string to the right of another
+1. ISNULL()   
+   find entries that are null   
+1. LPAD()   
+   add/'pad' string to the left of another   
+1. RPAD()   
+   add/'pad' string to the right of another   
 
 ### Assignment (Due One Week - Wednesday before Thanksgiving)
 
