@@ -14,6 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema unemath_Elmer
 -- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `unemath_Elmer` DEFAULT CHARACTER SET utf8 ;
 USE `unemath_Elmer` ;
 
 -- -----------------------------------------------------
@@ -32,6 +33,8 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci
 COMMENT = 'Non-specific name, description, credits for classes';
 
+CREATE INDEX `ix_course_id` ON `unemath_Elmer`.`Courses` (`id` ASC);
+
 
 -- -----------------------------------------------------
 -- Table `unemath_Elmer`.`Semesters`
@@ -47,6 +50,7 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
+CREATE INDEX `ix_semester_id` ON `unemath_Elmer`.`Semesters` (`id` ASC);
 
 
 -- -----------------------------------------------------
@@ -57,12 +61,16 @@ DROP TABLE IF EXISTS `unemath_Elmer`.`Taken` ;
 CREATE TABLE IF NOT EXISTS `unemath_Elmer`.`Taken` (
   `studentPRN` MEDIUMINT(9) NOT NULL,
   `CRN` MEDIUMINT(5) NOT NULL,
-  PRIMARY KEY (`studentPRN`, `CRN`),
-  INDEX `studentPRN_idx` (`studentPRN` ASC),
-  INDEX `CRN` (`CRN` ASC))
+  PRIMARY KEY (`studentPRN`, `CRN`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
+
+CREATE INDEX `studentPRN` ON `unemath_Elmer`.`Taken` (`studentPRN` ASC);
+
+CREATE INDEX `CRN` ON `unemath_Elmer`.`Taken` (`CRN` ASC);
+
+CREATE INDEX `ix_CRN` ON `unemath_Elmer`.`Taken` (`CRN` ASC);
 
 
 -- -----------------------------------------------------
@@ -73,67 +81,14 @@ DROP TABLE IF EXISTS `unemath_Elmer`.`Requirements` ;
 CREATE TABLE IF NOT EXISTS `unemath_Elmer`.`Requirements` (
   `type` MEDIUMINT(1) NOT NULL COMMENT 'Major(1) or Minor(2)',
   `course_id` MEDIUMINT(3) NOT NULL COMMENT 'Example: 190',
-  PRIMARY KEY (`type`, `course_id`),
-  INDEX `course_id_idx` (`course_id` ASC))
+  PRIMARY KEY (`type`, `course_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
+CREATE INDEX `course_id_idx` ON `unemath_Elmer`.`Requirements` (`course_id` ASC);
 
-
-
--- -----------------------------------------------------
--- Table `unemath_Elmer`.`Classes`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `unemath_Elmer`.`Classes` ;
-
--- for some strange reason, this is needed to create the foreign keys and therefore the table
--- it has been documented that this is an issue in MySQL http://stackoverflow.com/questions/4063141/mysql-foreign-key-error-1005-errno-150
-CREATE INDEX ix_course_id ON Requirements (course_id);
-CREATE INDEX ix_course_id ON Courses (id);
-CREATE INDEX ix_CRN ON Taken (CRN);
-CREATE INDEX ix_semester_id ON Semesters (id);
-CREATE INDEX ix_instructorPRN ON Instructors (PRN);
-CREATE INDEX ix_instructorPRN ON Faculty (PRN);
-
-
-CREATE TABLE `unemath_Elmer`.`Classes` (
-  `CRN` MEDIUMINT(5) NOT NULL,
-  `course_id` MEDIUMINT(3) NOT NULL,
-  `section` CHAR(1) NOT NULL,
-  `semester_id` MEDIUMINT(6) NOT NULL COMMENT 'Semester Offered\nExample:\nFall 2014 = 201502\nSpring 2015 = 201504',
-  `day` VARCHAR(5) NOT NULL COMMENT 'Days Met\nExample: MTWRF, TR',
-  `start_time` TIME NOT NULL,
-  `end_time` TIME NOT NULL,
-  `instructorPRN` MEDIUMINT(9) NOT NULL,
-  `location` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`CRN`),
-  FOREIGN KEY (`course_id`)
-    REFERENCES `unemath_Elmer`.`Courses` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  FOREIGN KEY (`semester_id`)
-    REFERENCES `unemath_Elmer`.`Semesters` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  FOREIGN KEY (`CRN`)
-    REFERENCES `unemath_Elmer`.`Taken` (`CRN`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  FOREIGN KEY (`course_id`)
-    REFERENCES `unemath_Elmer`.`Requirements` (`course_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  FOREIGN KEY (`instructorPRN`)
-    REFERENCES `unemath_Elmer`.`Faculty` (`PRN`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
-)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci
-COMMENT = 'Specific days, times, semesters, years for courses';
-
+CREATE INDEX `ix_course_id` ON `unemath_Elmer`.`Requirements` (`course_id` ASC);
 
 
 -- -----------------------------------------------------
@@ -150,6 +105,59 @@ CREATE TABLE IF NOT EXISTS `unemath_Elmer`.`Faculty` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
+
+
+-- -----------------------------------------------------
+-- Table `unemath_Elmer`.`Classes`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `unemath_Elmer`.`Classes` ;
+
+CREATE TABLE IF NOT EXISTS `unemath_Elmer`.`Classes` (
+  `CRN` MEDIUMINT(5) NOT NULL,
+  `course_id` MEDIUMINT(3) NOT NULL,
+  `section` CHAR(1) CHARACTER SET 'utf8' NOT NULL,
+  `semester_id` MEDIUMINT(6) NOT NULL COMMENT 'Semester Offered\nExample:\nFall 2014 = 201502\nSpring 2015 = 201504',
+  `day` VARCHAR(5) CHARACTER SET 'utf8' NOT NULL COMMENT 'Days Met\nExample: MTWRF, TR',
+  `start_time` TIME NOT NULL,
+  `end_time` TIME NOT NULL,
+  `instructorPRN` MEDIUMINT(9) NOT NULL,
+  `location` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
+  PRIMARY KEY (`CRN`),
+  CONSTRAINT `course_id`
+    FOREIGN KEY (`course_id`)
+    REFERENCES `unemath_Elmer`.`Courses` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `semester_id`
+    FOREIGN KEY (`semester_id`)
+    REFERENCES `unemath_Elmer`.`Semesters` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `taken_CRN`
+    FOREIGN KEY (`CRN`)
+    REFERENCES `unemath_Elmer`.`Taken` (`CRN`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `required_course_id`
+    FOREIGN KEY (`course_id`)
+    REFERENCES `unemath_Elmer`.`Requirements` (`course_id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `instructor_PRN`
+    FOREIGN KEY (`instructorPRN`)
+    REFERENCES `unemath_Elmer`.`Faculty` (`PRN`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci
+COMMENT = 'Specific days, times, semesters, years for courses';
+
+CREATE INDEX `idx_semester_id` ON `unemath_Elmer`.`Classes` (`semester_id` ASC);
+
+CREATE INDEX `idx_course_id` ON `unemath_Elmer`.`Classes` (`course_id` ASC);
+
+CREATE INDEX `idx_instructorPRN` ON `unemath_Elmer`.`Classes` (`instructorPRN` ASC);
 
 
 -- -----------------------------------------------------
@@ -171,21 +179,28 @@ CREATE TABLE IF NOT EXISTS `unemath_Elmer`.`Students` (
   `catyear` MEDIUMINT(4) NOT NULL COMMENT 'Catalog Year',
   `gradyear` MEDIUMINT(4) NOT NULL COMMENT 'Graduation Year',
   PRIMARY KEY (`PRN`),
-  FOREIGN KEY (`PRN`)
+  CONSTRAINT `student_PRN`
+    FOREIGN KEY (`PRN`)
     REFERENCES `unemath_Elmer`.`Taken` (`studentPRN`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  FOREIGN KEY (`advisorPRN`)
+  CONSTRAINT `advisor_PRN`
+    FOREIGN KEY (`advisorPRN`)
     REFERENCES `unemath_Elmer`.`Faculty` (`PRN`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  FOREIGN KEY (`type`)
+  CONSTRAINT `student_type`
+    FOREIGN KEY (`type`)
     REFERENCES `unemath_Elmer`.`Requirements` (`type`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
+
+CREATE INDEX `advisorPRN` ON `unemath_Elmer`.`Students` (`advisorPRN` ASC);
+
+CREATE INDEX `type` ON `unemath_Elmer`.`Students` (`type` ASC);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
