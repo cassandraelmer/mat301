@@ -36,6 +36,7 @@ Research the following, determine their functionality and syntax of use:
    SELECT UPPER('text') AS message
    ```   
    makes everything uppercase   
+   will select Text, TEXT, text, etc
 1. LOWER()   
    ```sql
    ```   
@@ -46,10 +47,13 @@ Research the following, determine their functionality and syntax of use:
    trim extra spaces from right   
 1. CONCAT()   
    ```sql
-   SELECT concat('fname',' ','lname') AS fullname
+   SELECT concat('John',' ','Smith') AS fullname;
    ```   
-   do not need FROM   
-   will make strings combined   
+   ```sql
+   SELECT CONCAT(first_name,' ',last_name) AS customer FROM Customers;
+   ```   
+   need FROM only if accessing table   
+   concatenate-will make strings combined   
 1. LENGTH()   
    length of string
 1. ISNULL()   
