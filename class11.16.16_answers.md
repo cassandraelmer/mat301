@@ -38,7 +38,7 @@ Research the following, determine their functionality and syntax of use:
    makes everything uppercase   
 1. LOWER()   
    ```sql
-   ```
+   ```   
    makes everything lowercase
 1. LTRIM()   
    trim extra spaces from left   
