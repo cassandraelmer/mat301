@@ -29,7 +29,24 @@
      NO   
 
 9.  Determine which is most restrictive, products in categories 200 or 201 and products manufactured by manufacturer number 72.   
+   products in categories 200 or 201 returns 142 rows   
+   products by manufacturer 72 returns 84 rows   
+   products by manufacturer 72 is more restrictive   
+   
+   Alternately,   
+   manufacturer first (listed last) .031 seconds
+   category first (listed last) .047 seconds
+   manufacturer more restrictive
    
 
 10.  Create a VIEW of all products from categories 200 or 201 manufactured by manufacturer 72 or 88.   
-   
+   ```sql
+   CREATE VIEW `Specials` AS
+   SELECT Products.product_id
+   FROM Products
+   WHERE category_id IN(200,201) AND manufacturer_id IN(72,88);
+   ```
+   Run to see results:
+   ```sql
+   SELECT * FROM unemath_Elmer.Specials;
+   ```
