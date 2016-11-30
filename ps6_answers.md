@@ -34,9 +34,9 @@
    products by manufacturer 72 is more restrictive   
    
    Alternately,   
-   manufacturer first (listed last) .031 seconds
-   category first (listed last) .047 seconds
-   manufacturer more restrictive
+   manufacturer first (listed last) .031 seconds   
+   category first (listed last) .047 seconds   
+   manufacturer more restrictive   
    
 
 10.  Create a VIEW of all products from categories 200 or 201 manufactured by manufacturer 72 or 88.   
