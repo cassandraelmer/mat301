@@ -1,6 +1,9 @@
 #### PS6: Due Dec. 2, 2016
 ---
 
+Cassandra Elmer
+-----
+
 1. True or False: MySQL automatically creates an _index_ for any key (foreign and primary).   
    False   
 
